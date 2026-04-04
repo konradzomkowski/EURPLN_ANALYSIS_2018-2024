@@ -30,8 +30,15 @@ boot_var <- function(data, index) {
 #----------------------------------------
 # 1. OKRES BAZOWY 2018-2020
 #----------------------------------------
-EURPLNbaza <- read.csv("C:/Users/konra/Downloads/EURPLNbaza.csv", stringsAsFactors = FALSE)
-EURPLNbaza$DATA <- as.Date(substr(EURPLNbaza$Local.time,1,10), format="%d.%m.%Y")
+EURPLNbaza <- read.csv("C:/licencjat_R/EURPLN 2018-2024 ANALYSIS/data/EURPLNbaza.csv", stringsAsFactors = FALSE)
+head(EURPLNbaza)
+# Sprawdzenie nazw kolumn
+colnames(EURPLNbaza)
+
+# Konwersja kolumny z datą na format Date
+EURPLNbaza$DATA <- as.Date(substr(EURPLNbaza$Local.time, 1, 10), format="%d.%m.%Y")
+
+library(ggplot2)
 
 ggplot(EURPLNbaza, aes(x=DATA, y=Close)) +
   geom_line(color="darkblue", size=1) +
@@ -56,7 +63,7 @@ boot.ci(bootBaza_var, type="perc")
 #----------------------------------------
 # 2. OKRES COVID 2020-2022
 #----------------------------------------
-EURPLNcovid <- read.csv("data/EURPLNcovid.csv", stringsAsFactors = FALSE)
+EURPLNcovid <- read.csv("C:/licencjat_R/EURPLN 2018-2024 ANALYSIS/data/EURPLNcovid.csv", stringsAsFactors = FALSE)
 EURPLNcovid$DATA <- as.Date(substr(EURPLNcovid$Local.time,1,10), format="%d.%m.%Y")
 
 ggplot(EURPLNcovid, aes(x=DATA, y=Close)) +
@@ -96,7 +103,7 @@ boot.ci(boot_res_comp, type="perc")
 #----------------------------------------
 # 3. OKRES WOJNY 2022-2024
 #----------------------------------------
-EURPLNwojna <- read.csv("data/EURPLNwojna.csv", stringsAsFactors = FALSE)
+EURPLNwojna <- read.csv("C:/licencjat_R/EURPLN 2018-2024 ANALYSIS/data/EURPLNcovid.csv", stringsAsFactors = FALSE)
 EURPLNwojna$DATA <- as.Date(substr(EURPLNwojna$Local.time,1,10), format="%d.%m.%Y")
 
 ggplot(EURPLNwojna, aes(x=DATA, y=Close)) +
@@ -132,6 +139,25 @@ data_list_wojna <- list(probBaza, probWojna)
 set.seed(123)
 boot_res_wojna <- boot(data_list_wojna, boot_diff_means_wojna, R=10000)
 boot.ci(boot_res_wojna, type="perc")
+# Dla okresu bazowego
+
+#wykresy
+png("EURPLNbaza.png", width=800, height=600)
+ggplot(EURPLNbaza, aes(x=DATA, y=Close)) + geom_line(color="blue") +
+  labs(title="Kurs EUR/PLN 2018-2020", x="Data", y="Kurs")
+dev.off()
+
+# Dla okresu COVID
+png("EURPLNcovid.png", width=800, height=600)
+ggplot(EURPLNcovid, aes(x=DATA, y=Close)) + geom_line(color="red") +
+  labs(title="Kurs EUR/PLN 2020-2022", x="Data", y="Kurs")
+dev.off()
+
+# Dla okresu wojny
+png("EURPLNwojna.png", width=800, height=600)
+ggplot(EURPLNwojna, aes(x=DATA, y=Close)) + geom_line(color="green") +
+  labs(title="Kurs EUR/PLN 2022-2024", x="Data", y="Kurs")
+dev.off()
 
 #----------------------------------------
 # KONIEC ANALIZY
