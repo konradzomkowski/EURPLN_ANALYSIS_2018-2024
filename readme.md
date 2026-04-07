@@ -26,6 +26,13 @@ Analiza obejmuje:
 
 ---
 
+## Wnioski
+
+- Średnia stopa zwrotu w okresie COVID była wyższa niż w okresie bazowym, co sugeruje zwiększoną zmienność kursu.  
+- Okres wojny cechuje się największą wariancją stóp zwrotu i niestabilnością kursu EUR/PLN.  
+- Testy normalności wykazały, że rozkład stóp zwrotu nie zawsze jest normalny, co uzasadnia zastosowanie metody bootstrap.  
+- Analiza porównawcza potwierdza istotne różnice w ryzyku i średnich stopach zwrotu między okresami.  
+
 ## Pliki w repozytorium
 - `data/EURPLNbaza.csv` – dane dla okresu bazowego  
 - `data/EURPLNcovid.csv` – dane dla okresu COVID  
