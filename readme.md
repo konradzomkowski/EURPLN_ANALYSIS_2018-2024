@@ -28,10 +28,7 @@ Analiza obejmuje:
 
 ## Wnioski
 
-- Średnia stopa zwrotu w okresie COVID była wyższa niż w okresie bazowym, co sugeruje zwiększoną zmienność kursu.  
-- Okres wojny cechuje się największą wariancją stóp zwrotu i niestabilnością kursu EUR/PLN.  
-- Testy normalności wykazały, że rozkład stóp zwrotu nie zawsze jest normalny, co uzasadnia zastosowanie metody bootstrap.  
-- Analiza porównawcza potwierdza istotne różnice w ryzyku i średnich stopach zwrotu między okresami.  
+Para EUR/PLN w badanych okresach (2018–2024) wykazywała stosunkowo niską zmienność i stabilne średnie stopy zwrotu, zarówno w okresie bazowym, pandemii, jak i wojny. Zarówno testy t-Studenta, jak i testy bootstrapowe nie wskazały istotnych statystycznie odchyleń od zera, co oznacza, że kurs euro do złotego nie ulegał znaczącym zmianom kierunkowym. Stabilność tej pary sugeruje, że złoty jest relatywnie odporny na globalne kryzysy i wahania rynków walutowych w porównaniu do bardziej niestabilnych walut, takich jak turecka lira.
 
 ## Pliki w repozytorium
 - `data/EURPLNbaza.csv` – dane dla okresu bazowego  
