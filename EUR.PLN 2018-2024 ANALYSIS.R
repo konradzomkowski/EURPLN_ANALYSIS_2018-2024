@@ -2,6 +2,7 @@
 # Analiza kursu EUR/PLN w 3 okresach: bazowy, COVID, wojna
 #========================================================
 
+install.packages("ggplot2")
 library(ggplot2)
 library(boot)
 library(tseries)
