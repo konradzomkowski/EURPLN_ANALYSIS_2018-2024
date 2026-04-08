@@ -16,13 +16,13 @@ Analiza obejmuje:
 ## Wykresy kursu EUR/PLN
 
 ### Okres bazowy (2018-2020)
-![EURPLN 2018-2020](images/EURPLNbaza.png)
+![EURPLN 2018-2020](data/EURPLNbaza.png)
 
 ### Okres COVID (2020-2022)
-![EURPLN 2020-2022](images/EURPLNcovid.png)
+![EURPLN 2020-2022](data/EURPLNcovid.png)
 
 ### Okres wojny (2022-2024)
-![EURPLN 2022-2024](images/EURPLNwojna.png)
+![EURPLN 2022-2024](data/EURPLNwojna.png)
 
 ---
 
