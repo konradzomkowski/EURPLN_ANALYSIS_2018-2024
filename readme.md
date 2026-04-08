@@ -1,5 +1,15 @@
 # Analiza kursu EUR/PLN (2018-2024)
 
+Analiza kursu EUR/PLN (2018-2024)
+
+Projekt stanowi skróconą wersję analizy przeprowadzonej w pracy licencjackiej. 
+W pełnej pracy badaniu poddano sześć par walutowych w relacji do euro: 
+EUR/USD, EUR/GBP, EUR/AUD, EUR/PLN, oraz EUR/TRY . 
+
+Repozytorium prezentuje fragment analizy dotyczący pary EUR/PLN.
+
+Projekt zawiera analizę kursu EUR/PLN w trzech okresach:
+
 Projekt zawiera analizę kursu EUR/PLN w trzech okresach:  
 - **Okres bazowy (2018-2020)**  
 - **Okres COVID (2020-2022)**  
