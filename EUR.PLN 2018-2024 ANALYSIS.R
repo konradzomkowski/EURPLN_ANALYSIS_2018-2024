@@ -31,7 +31,7 @@ boot_var <- function(data, index) {
 #----------------------------------------
 # 1. OKRES BAZOWY 2018-2020
 #----------------------------------------
-EURPLNbaza <- read.csv("C:/licencjat_R/EURPLN 2018-2024 ANALYSIS/data/EURPLNbaza.csv", stringsAsFactors = FALSE)
+EURPLNbaza <- read.csv("C:/Users/kondzioz/Desktop/EURPLN_ANALYSIS_2018-2024/data/EURPLNbaza.csv", stringsAsFactors = FALSE)
 head(EURPLNbaza)
 # Sprawdzenie nazw kolumn
 colnames(EURPLNbaza)
@@ -64,7 +64,7 @@ boot.ci(bootBaza_var, type="perc")
 #----------------------------------------
 # 2. OKRES COVID 2020-2022
 #----------------------------------------
-EURPLNcovid <- read.csv("C:/licencjat_R/EURPLN 2018-2024 ANALYSIS/data/EURPLNcovid.csv", stringsAsFactors = FALSE)
+EURPLNcovid <- read.csv("C:/Users/kondzioz/Desktop/EURPLN_ANALYSIS_2018-2024/data/EURPLNcovid.csv", stringsAsFactors = FALSE)
 EURPLNcovid$DATA <- as.Date(substr(EURPLNcovid$Local.time,1,10), format="%d.%m.%Y")
 
 ggplot(EURPLNcovid, aes(x=DATA, y=Close)) +
@@ -104,7 +104,7 @@ boot.ci(boot_res_comp, type="perc")
 #----------------------------------------
 # 3. OKRES WOJNY 2022-2024
 #----------------------------------------
-EURPLNwojna <- read.csv("C:/licencjat_R/EURPLN 2018-2024 ANALYSIS/data/EURPLNcovid.csv", stringsAsFactors = FALSE)
+EURPLNwojna <- read.csv("C:/Users/kondzioz/Desktop/EURPLN_ANALYSIS_2018-2024/data/EURPLNwojna.csv", stringsAsFactors = FALSE)
 EURPLNwojna$DATA <- as.Date(substr(EURPLNwojna$Local.time,1,10), format="%d.%m.%Y")
 
 ggplot(EURPLNwojna, aes(x=DATA, y=Close)) +
