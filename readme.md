@@ -45,7 +45,7 @@ Para EUR/PLN w badanych okresach (2018–2024) wykazywała stosunkowo niską zmi
 - `data/EURPLNcovid.csv` – dane dla okresu COVID  
 - `data/EURPLNwojna.csv` – dane dla okresu wojny  
 - `EURPLN_analysis.R` – główny skrypt R  
-- `images/EURPLNbaza.png`, `images/EURPLNcovid.png`, `images/EURPLNwojna.png` – wykresy  
+- `data/EURPLNbaza.png`, `data/EURPLNcovid.png`, `data/EURPLNwojna.png` – wykresy  
 
 ---
 
